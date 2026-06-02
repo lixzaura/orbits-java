@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Satelite {
 
-    private String nomeSatelite;
+    private String nome;
     private String finalidade;
     private Empresa empresa;
     private String trajeto;
@@ -17,8 +17,8 @@ public class Satelite {
 
     // construtor
 
-    public Satelite(String nomeSatelite, String finalidade, Empresa empresa, String trajeto, double altitudeOrbital, double velocidadeOrbital, LocalDate dataLancamento, LocalDate tempoVida, String tipoOrbita, String statusOperacao) {
-        this.nomeSatelite = nomeSatelite;
+    public Satelite(String nome, String finalidade, Empresa empresa, String trajeto, double altitudeOrbital, double velocidadeOrbital, LocalDate dataLancamento, LocalDate tempoVida, String tipoOrbita, String statusOperacao) {
+        this.nome = nome;
         this.finalidade = finalidade;
         this.empresa = empresa;
         this.trajeto = trajeto;
@@ -32,12 +32,12 @@ public class Satelite {
 
     // Getter e Setter
 
-    public String getNomeSatelite() {
-        return nomeSatelite;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeSatelite(String nomeSatelite) {
-        this.nomeSatelite = nomeSatelite;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getFinalidade() {

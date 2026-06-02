@@ -4,38 +4,38 @@ import java.time.LocalDate;
 
 public class Relatorio {
 
-    private String tituloRelatorio;
-    private String descricaoRelatorio;
+    private String titulo;
+    private String descricao;
     private LocalDate dataEmissao;
-    private String tipoRelatorio;
+    private String tipo;
     private Usuario usuario;
 
     // construtor
 
-    public Relatorio(String tituloRelatorio, String descricaoRelatorio, LocalDate dataEmissao, String tipoRelatorio, Usuario usuario) {
-        this.tituloRelatorio = tituloRelatorio;
-        this.descricaoRelatorio = descricaoRelatorio;
+    public Relatorio(String titulo, String descricao, LocalDate dataEmissao, String tipo, Usuario usuario) {
+        this.titulo = titulo;
+        this.descricao = descricao;
         this.dataEmissao = dataEmissao;
-        this.tipoRelatorio = tipoRelatorio;
+        this.tipo = tipo;
         this.usuario = usuario;
     }
 
     // g e s
 
-    public String getTituloRelatorio() {
-        return tituloRelatorio;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setTituloRelatorio(String tituloRelatorio) {
-        this.tituloRelatorio = tituloRelatorio;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public String getDescricaoRelatorio() {
-        return descricaoRelatorio;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescricaoRelatorio(String descricaoRelatorio) {
-        this.descricaoRelatorio = descricaoRelatorio;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public LocalDate getDataEmissao() {
@@ -46,12 +46,12 @@ public class Relatorio {
         this.dataEmissao = dataEmissao;
     }
 
-    public String getTipoRelatorio() {
-        return tipoRelatorio;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setTipoRelatorio(String tipoRelatorio) {
-        this.tipoRelatorio = tipoRelatorio;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public Usuario getUsuario() {

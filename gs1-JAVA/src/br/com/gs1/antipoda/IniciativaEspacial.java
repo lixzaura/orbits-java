@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class IniciativaEspacial {
 
     private Empresa empresa;
-    private String nomeIniciativa;
+    private String nome;
     private String descricao;
     private String areaAtuacao;
     private LocalDate dataInicio;
@@ -13,9 +13,9 @@ public class IniciativaEspacial {
 
     // construtor
 
-    public IniciativaEspacial(Empresa empresa, String nomeIniciativa, String descricao, String areaAtuacao, LocalDate dataInicio, String statusIniciativa) {
+    public IniciativaEspacial(Empresa empresa, String nome, String descricao, String areaAtuacao, LocalDate dataInicio, String statusIniciativa) {
         this.empresa = empresa;
-        this.nomeIniciativa = nomeIniciativa;
+        this.nome = nome;
         this.descricao = descricao;
         this.areaAtuacao = areaAtuacao;
         this.dataInicio = dataInicio;
@@ -56,12 +56,12 @@ public class IniciativaEspacial {
         this.descricao = descricao;
     }
 
-    public String getNomeIniciativa() {
-        return nomeIniciativa;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeIniciativa(String nomeIniciativa) {
-        this.nomeIniciativa = nomeIniciativa;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public Empresa getEmpresa() {

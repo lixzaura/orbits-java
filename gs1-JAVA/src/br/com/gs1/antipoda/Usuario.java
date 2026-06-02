@@ -4,17 +4,17 @@ import java.time.LocalDate;
 
 public class Usuario {
 
-    private String nomeUsuario;
-    private String emailUsuario;
+    private String nome;
+    private String email;
     private String telefone;
     private String senha;
     private LocalDate dataCadastro;
 
     // construtior
 
-    public Usuario(String nomeUsuario, String emailUsuario, String telefone, String senha, LocalDate dataCadastro) {
-        this.nomeUsuario = nomeUsuario;
-        this.emailUsuario = emailUsuario;
+    public Usuario(String nome, String email, String telefone, String senha, LocalDate dataCadastro) {
+        this.nome = nome;
+        this.email = email;
         this.telefone = telefone;
         this.senha = senha;
         this.dataCadastro = dataCadastro;
@@ -22,20 +22,20 @@ public class Usuario {
 
     // GETTERS E SETTERS
 
-    public String getNomeUsuario() {
-        return nomeUsuario;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeUsuario(String nomeUsuario) {
-        this.nomeUsuario = nomeUsuario;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getEmailUsuario() {
-        return emailUsuario;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailUsuario(String emailUsuario) {
-        this.emailUsuario = emailUsuario;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getTelefone() {

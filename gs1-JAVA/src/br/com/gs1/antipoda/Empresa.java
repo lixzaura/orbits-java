@@ -3,12 +3,12 @@ package br.com.gs1.antipoda;
 import java.time.LocalDate;
 
 public class Empresa {
-    private String nomeEmpresa;
+    private String nome;
     private String paisOrigem;
-    private String statusEmpresa;
-    private String emailEmpresa;
+    private String status;
+    private String email;
     private String telefone;
-    private String tipoEmpresa;
+    private String tipo;
     private LocalDate dataFundacao;
     private String descricao;
     private String siteOficial;
@@ -17,13 +17,13 @@ public class Empresa {
 
     // Construtor
 
-    public Empresa(String nomeEmpresa, String paisOrigem, String statusEmpresa, String emailEmpresa, String telefone, String tipoEmpresa, LocalDate dataFundacao, String descricao, String siteOficial, String cnpj, int score) {
-        this.nomeEmpresa = nomeEmpresa;
+    public Empresa(String nome, String paisOrigem, String status, String email, String telefone, String tipo, LocalDate dataFundacao, String descricao, String siteOficial, String cnpj, int score) {
+        this.nome = nome;
         this.paisOrigem = paisOrigem;
-        this.statusEmpresa = statusEmpresa;
-        this.emailEmpresa = emailEmpresa;
+        this.status = status;
+        this.email = email;
         this.telefone = telefone;
-        this.tipoEmpresa = tipoEmpresa;
+        this.tipo = tipo;
         this.dataFundacao = dataFundacao;
         this.descricao = descricao;
         this.siteOficial = siteOficial;
@@ -33,12 +33,12 @@ public class Empresa {
 
     //GETTERS E SETTERRS
 
-    public String getNomeEmpresa() {
-        return nomeEmpresa;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeEmpresa(String nomeEmpresa) {
-        this.nomeEmpresa = nomeEmpresa;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getPaisOrigem() {
@@ -49,20 +49,20 @@ public class Empresa {
         this.paisOrigem = paisOrigem;
     }
 
-    public String getStatusEmpresa() {
-        return statusEmpresa;
+    public String getStatus() {
+        return status;
     }
 
-    public void setStatusEmpresa(String statusEmpresa) {
-        this.statusEmpresa = statusEmpresa;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public String getEmailEmpresa() {
-        return emailEmpresa;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailEmpresa(String emailEmpresa) {
-        this.emailEmpresa = emailEmpresa;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getTelefone() {
@@ -73,12 +73,12 @@ public class Empresa {
         this.telefone = telefone;
     }
 
-    public String getTipoEmpresa() {
-        return tipoEmpresa;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setTipoEmpresa(String tipoEmpresa) {
-        this.tipoEmpresa = tipoEmpresa;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public LocalDate getDataFundacao() {

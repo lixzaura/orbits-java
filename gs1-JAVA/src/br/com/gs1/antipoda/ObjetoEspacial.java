@@ -4,9 +4,9 @@ import java.time.LocalDate;
 
 public class ObjetoEspacial {
 
-    private String nomeObjeto;
-    private String categoriaObjeto;
-    private String statusObjeto;
+    private String nome;
+    private String categoria;
+    private String status;
     private double tamanho;
     private double velocidade;
     private double altitudeOrbital;
@@ -15,10 +15,10 @@ public class ObjetoEspacial {
 
     // construtor
 
-    public ObjetoEspacial(String nomeObjeto, String categoriaObjeto, String statusObjeto, double tamanho, double velocidade, double altitudeOrbital, String riscoColisao, LocalDate dataRegistro) {
-        this.nomeObjeto = nomeObjeto;
-        this.categoriaObjeto = categoriaObjeto;
-        this.statusObjeto = statusObjeto;
+    public ObjetoEspacial(String nome, String categoria, String status, double tamanho, double velocidade, double altitudeOrbital, String riscoColisao, LocalDate dataRegistro) {
+        this.nome = nome;
+        this.categoria = categoria;
+        this.status = status;
         this.tamanho = tamanho;
         this.velocidade = velocidade;
         this.altitudeOrbital = altitudeOrbital;
@@ -28,28 +28,28 @@ public class ObjetoEspacial {
 
     // G e S
 
-    public String getNomeObjeto() {
-        return nomeObjeto;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeObjeto(String nomeObjeto) {
-        this.nomeObjeto = nomeObjeto;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getCategoriaObjeto() {
-        return categoriaObjeto;
+    public String getCategoria() {
+        return categoria;
     }
 
-    public void setCategoriaObjeto(String categoriaObjeto) {
-        this.categoriaObjeto = categoriaObjeto;
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 
-    public String getStatusObjeto() {
-        return statusObjeto;
+    public String getStatus() {
+        return status;
     }
 
-    public void setStatusObjeto(String statusObjeto) {
-        this.statusObjeto = statusObjeto;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public double getTamanho() {
