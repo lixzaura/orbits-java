@@ -2,7 +2,7 @@ package br.com.gs1.antipoda;
 
 import java.time.LocalDate;
 
-public class ObjetoEspacial {
+public abstract class ObjetoEspacial {
 
     private String nome;
     private String categoria;

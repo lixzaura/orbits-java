@@ -60,9 +60,7 @@ public class IniciativaEspacial {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    public void setNome(String nome) {this.nome = nome; }
 
     public Empresa getEmpresa() {
         return empresa;
