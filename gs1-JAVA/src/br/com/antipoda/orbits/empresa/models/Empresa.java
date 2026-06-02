@@ -1,4 +1,4 @@
-package br.com.antipoda.orbits.empresa;
+package br.com.antipoda.orbits.empresa.models;
 
 import java.time.LocalDate;
 

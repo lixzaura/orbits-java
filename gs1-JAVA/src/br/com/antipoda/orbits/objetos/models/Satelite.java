@@ -1,6 +1,6 @@
 package br.com.antipoda.orbits.objetos.models;
 
-import br.com.antipoda.orbits.empresa.Empresa;
+import br.com.antipoda.orbits.empresa.models.Empresa;
 
 import java.time.LocalDate;
 

@@ -1,4 +1,4 @@
-package br.com.antipoda.orbits.usuario;
+package br.com.antipoda.orbits.usuario.models;
 
 import java.time.LocalDate;
 

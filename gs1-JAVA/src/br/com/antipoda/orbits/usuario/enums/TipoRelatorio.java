@@ -1,4 +1,4 @@
-package br.com.antipoda.orbits.usuario;
+package br.com.antipoda.orbits.usuario.enums;
 
 public enum TipoRelatorio {
     OPERACIONAL,
