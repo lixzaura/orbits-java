@@ -4,10 +4,12 @@ import br.com.antipoda.orbits.empresa.models.Empresa;
 import br.com.antipoda.orbits.iniciativa.enums.StatusIniciativa;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class IniciativaEspacial {
 
-    private Empresa empresa;
+    private List<Empresa> empresas = new ArrayList<>();
     private String nome;
     private String descricao;
     private String areaAtuacao;
@@ -16,8 +18,8 @@ public class IniciativaEspacial {
 
     // construtor
 
-    public IniciativaEspacial(Empresa empresa, String nome, String descricao, String areaAtuacao, LocalDate dataInicio, StatusIniciativa statusIniciativa) {
-        this.empresa = empresa;
+    public IniciativaEspacial(List<Empresa> empresas, String nome, String descricao, String areaAtuacao, LocalDate dataInicio, StatusIniciativa statusIniciativa) {
+        this.empresas = empresas;
         this.nome = nome;
         this.descricao = descricao;
         this.areaAtuacao = areaAtuacao;
@@ -65,12 +67,12 @@ public class IniciativaEspacial {
 
     public void setNome(String nome) {this.nome = nome; }
 
-    public Empresa getEmpresa() {
-        return empresa;
+    public List<Empresa> getEmpresas() {
+        return empresas;
     }
 
-    public void setEmpresa(Empresa empresa) {
-        this.empresa = empresa;
+    public void setEmpresas(List<Empresa> empresa) {
+        this.empresas = empresas;
     }
 
     // OUTROS

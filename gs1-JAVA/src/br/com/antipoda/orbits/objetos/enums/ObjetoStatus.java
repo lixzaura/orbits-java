@@ -6,5 +6,5 @@ public enum ObjetoStatus {
 
     // Caso seja um satélite
     ATIVO,
-    Inativo
+    DANIFICADO, Inativo
 }

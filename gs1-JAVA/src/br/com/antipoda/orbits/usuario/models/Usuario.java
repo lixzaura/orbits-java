@@ -7,7 +7,7 @@ public class Usuario {
     private String nome;
     private String email;
     private String telefone;
-    private String senha;
+    protected String senha;
     private LocalDate dataCadastro;
 
     // construtior
@@ -46,10 +46,6 @@ public class Usuario {
         this.telefone = telefone;
     }
 
-    public String getSenha() {
-        return senha;
-    }
-
     public void setSenha(String senha) {
         this.senha = senha;
     }
@@ -63,4 +59,5 @@ public class Usuario {
     }
 
     // OUTROS MÉTODOS
+
 }

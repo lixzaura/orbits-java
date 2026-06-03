@@ -2,10 +2,11 @@ package br.com.antipoda.orbits.objetos.models;
 
 import br.com.antipoda.orbits.objetos.enums.CategoriaObjeto;
 import br.com.antipoda.orbits.objetos.enums.ObjetoStatus;
+import br.com.antipoda.orbits.objetos.enums.RiscoColisao;
 
 import java.time.LocalDate;
 
-public abstract class ObjetoEspacial {
+public class ObjetoEspacial {
 
     private String nome;
     private CategoriaObjeto categoria;
@@ -13,12 +14,12 @@ public abstract class ObjetoEspacial {
     private double tamanho;
     private double velocidade;
     private double altitudeOrbital;
-    private String riscoColisao;
+    private RiscoColisao riscoColisao;
     private LocalDate dataRegistro;
 
     // construtor
 
-    public ObjetoEspacial(String nome, CategoriaObjeto categoria, ObjetoStatus status, double tamanho, double velocidade, double altitudeOrbital, String riscoColisao, LocalDate dataRegistro) {
+    public ObjetoEspacial(String nome, CategoriaObjeto categoria, ObjetoStatus status, double tamanho, double velocidade, double altitudeOrbital, RiscoColisao riscoColisao, LocalDate dataRegistro) {
         this(nome, categoria, status, velocidade, altitudeOrbital, dataRegistro);
         this.categoria = categoria;
         this.tamanho = tamanho;
@@ -84,11 +85,11 @@ public abstract class ObjetoEspacial {
         this.altitudeOrbital = altitudeOrbital;
     }
 
-    public String getRiscoColisao() {
+    public RiscoColisao getRiscoColisao() {
         return riscoColisao;
     }
 
-    public void setRiscoColisao(String riscoColisao) {
+    public void setRiscoColisao(RiscoColisao riscoColisao) {
         this.riscoColisao = riscoColisao;
     }
 

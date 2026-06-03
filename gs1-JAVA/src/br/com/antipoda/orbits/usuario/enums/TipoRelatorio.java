@@ -10,4 +10,5 @@ public enum TipoRelatorio {
     DESEMPENHO,
     CONFORMIDADE,
     GERAL
+
 }

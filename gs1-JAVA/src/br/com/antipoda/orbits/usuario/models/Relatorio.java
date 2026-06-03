@@ -1,18 +1,21 @@
 package br.com.antipoda.orbits.usuario.models;
 
+import br.com.antipoda.orbits.usuario.enums.TipoRelatorio;
+
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Relatorio {
 
     private String titulo;
     private String descricao;
-    private LocalDate dataEmissao;
-    private String tipo;
+    private LocalDateTime dataEmissao;
+    private TipoRelatorio tipo;
     private Usuario usuario;
 
     // construtor
 
-    public Relatorio(String titulo, String descricao, LocalDate dataEmissao, String tipo, Usuario usuario) {
+    public Relatorio(String titulo, String descricao, LocalDateTime dataEmissao, TipoRelatorio tipo, Usuario usuario) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.dataEmissao = dataEmissao;
@@ -38,19 +41,19 @@ public class Relatorio {
         this.descricao = descricao;
     }
 
-    public LocalDate getDataEmissao() {
+    public LocalDateTime getDataEmissao() {
         return dataEmissao;
     }
 
-    public void setDataEmissao(LocalDate dataEmissao) {
+    public void setDataEmissao(LocalDateTime dataEmissao) {
         this.dataEmissao = dataEmissao;
     }
 
-    public String getTipo() {
+    public TipoRelatorio getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(TipoRelatorio tipo) {
         this.tipo = tipo;
     }
 

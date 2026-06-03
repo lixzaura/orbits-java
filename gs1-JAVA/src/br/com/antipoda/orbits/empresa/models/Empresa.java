@@ -19,10 +19,10 @@ public class Empresa {
 
     // Construtor
 
-    public Empresa(String nome, String paisOrigem, StatusEmpresa status, String email, String telefone, String tipo, LocalDate dataFundacao, String descricao, String siteOficial, String cnpj, int score) {
+    public Empresa(String nome, String paisOrigem, String email, String telefone, String tipo, LocalDate dataFundacao, String descricao, String siteOficial, String cnpj, int score) {
         this.nome = nome;
         this.paisOrigem = paisOrigem;
-        this.status = status;
+        this.status = StatusEmpresa.EM_ANALISE;
         this.email = email;
         this.telefone = telefone;
         this.tipo = tipo;
@@ -125,8 +125,19 @@ public class Empresa {
 
     // OUTROS METODOS
 
-        // public void aumentarScore(int pontos)
-        // public void reduzirScore(int pontos)
+
+    @Override
+    public String toString() {
+        String string = this.nome + " - " + this.score + " pontos";
+        return string;
+    }
+
+    public void aumentarScore(int pontos){
+            this.score += pontos;
+        }
+        public void reduzirScore(int pontos){
+        this.score -= pontos;
+        }
         // public void alterarStatus(String status)
 }
 
