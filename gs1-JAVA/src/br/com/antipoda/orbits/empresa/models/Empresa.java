@@ -1,11 +1,13 @@
 package br.com.antipoda.orbits.empresa.models;
 
+import br.com.antipoda.orbits.empresa.enums.StatusEmpresa;
+
 import java.time.LocalDate;
 
 public class Empresa {
     private String nome;
     private String paisOrigem;
-    private String status;
+    private StatusEmpresa status;
     private String email;
     private String telefone;
     private String tipo;
@@ -17,7 +19,7 @@ public class Empresa {
 
     // Construtor
 
-    public Empresa(String nome, String paisOrigem, String status, String email, String telefone, String tipo, LocalDate dataFundacao, String descricao, String siteOficial, String cnpj, int score) {
+    public Empresa(String nome, String paisOrigem, StatusEmpresa status, String email, String telefone, String tipo, LocalDate dataFundacao, String descricao, String siteOficial, String cnpj, int score) {
         this.nome = nome;
         this.paisOrigem = paisOrigem;
         this.status = status;
@@ -49,11 +51,11 @@ public class Empresa {
         this.paisOrigem = paisOrigem;
     }
 
-    public String getStatus() {
+    public StatusEmpresa getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(StatusEmpresa status) {
         this.status = status;
     }
 

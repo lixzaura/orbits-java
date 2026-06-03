@@ -1,6 +1,7 @@
 package br.com.antipoda.orbits.iniciativa.models;
 
 import br.com.antipoda.orbits.empresa.models.Empresa;
+import br.com.antipoda.orbits.iniciativa.enums.StatusIniciativa;
 
 import java.time.LocalDate;
 
@@ -11,11 +12,11 @@ public class IniciativaEspacial {
     private String descricao;
     private String areaAtuacao;
     private LocalDate dataInicio;
-    private String statusIniciativa;
+    private StatusIniciativa statusIniciativa;
 
     // construtor
 
-    public IniciativaEspacial(Empresa empresa, String nome, String descricao, String areaAtuacao, LocalDate dataInicio, String statusIniciativa) {
+    public IniciativaEspacial(Empresa empresa, String nome, String descricao, String areaAtuacao, LocalDate dataInicio, StatusIniciativa statusIniciativa) {
         this.empresa = empresa;
         this.nome = nome;
         this.descricao = descricao;
@@ -26,11 +27,11 @@ public class IniciativaEspacial {
 
     // G e S
 
-    public String getStatusIniciativa() {
+    public StatusIniciativa getStatusIniciativa() {
         return statusIniciativa;
     }
 
-    public void setStatusIniciativa(String statusIniciativa) {
+    public void setStatusIniciativa(StatusIniciativa statusIniciativa) {
         this.statusIniciativa = statusIniciativa;
     }
 

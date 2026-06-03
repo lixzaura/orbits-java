@@ -1,12 +1,15 @@
 package br.com.antipoda.orbits.objetos.models;
 
+import br.com.antipoda.orbits.objetos.enums.CategoriaObjeto;
+import br.com.antipoda.orbits.objetos.enums.ObjetoStatus;
+
 import java.time.LocalDate;
 
 public abstract class ObjetoEspacial {
 
     private String nome;
-    private String categoria;
-    private String status;
+    private CategoriaObjeto categoria;
+    private ObjetoStatus status;
     private double tamanho;
     private double velocidade;
     private double altitudeOrbital;
@@ -15,14 +18,19 @@ public abstract class ObjetoEspacial {
 
     // construtor
 
-    public ObjetoEspacial(String nome, String categoria, String status, double tamanho, double velocidade, double altitudeOrbital, String riscoColisao, LocalDate dataRegistro) {
+    public ObjetoEspacial(String nome, CategoriaObjeto categoria, ObjetoStatus status, double tamanho, double velocidade, double altitudeOrbital, String riscoColisao, LocalDate dataRegistro) {
+        this(nome, categoria, status, velocidade, altitudeOrbital, dataRegistro);
+        this.categoria = categoria;
+        this.tamanho = tamanho;
+        this.riscoColisao = riscoColisao;
+    }
+
+    public ObjetoEspacial(String nome, CategoriaObjeto categoria, ObjetoStatus status, double velocidade, double altitudeOrbital, LocalDate dataRegistro) {
         this.nome = nome;
         this.categoria = categoria;
         this.status = status;
-        this.tamanho = tamanho;
         this.velocidade = velocidade;
         this.altitudeOrbital = altitudeOrbital;
-        this.riscoColisao = riscoColisao;
         this.dataRegistro = dataRegistro;
     }
 
@@ -36,19 +44,19 @@ public abstract class ObjetoEspacial {
         this.nome = nome;
     }
 
-    public String getCategoria() {
+    public CategoriaObjeto getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
+    public void setCategoria(CategoriaObjeto categoria) {
         this.categoria = categoria;
     }
 
-    public String getStatus() {
+    public ObjetoStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(ObjetoStatus status) {
         this.status = status;
     }
 
