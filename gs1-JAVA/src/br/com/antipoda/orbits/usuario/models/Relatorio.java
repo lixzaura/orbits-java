@@ -64,4 +64,19 @@ public class Relatorio {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+
+    //Outros metodos
+    public static String toString(String titulo, String descricao, TipoRelatorio tipoRelatorio){
+        StringBuilder st = new StringBuilder();
+        st.append("Titulo: ").append(titulo).append('\n');
+        st.append("Descricao: ").append(descricao).append('\n');
+        st.append("Tipo: ").append(tipoRelatorio.toString().toLowerCase().replace('_', ' ')).append('\n');
+
+        return st.toString();
+    }
+
+    public String toString() {
+        return this.toString(titulo, descricao, tipo) + "DataEmissao: " + dataEmissao.getDayOfMonth() + "/" + dataEmissao.getMonth() + "/" +dataEmissao.getYear() + " - " + dataEmissao.getHour() + ":" + dataEmissao.getMinute();
+    }
 }
+

@@ -22,19 +22,46 @@ public class Administrador extends Usuario{
         System.out.println("insira sua senha");
         String pass = scanner.nextLine();
         if (!pass.equals(this.senha)){
-            System.out.println("Senha Inválida");
+            System.out.println("Senha Inválida. Gostaria de tentar novamente? (s/n)");
+            if(scanner.nextLine().equalsIgnoreCase("s"))
+                return emitirRelatorio(titulo, descricao, dataEmissao, tipoRelatorio);
             return null;
         }
         return new Relatorio(titulo, descricao, dataEmissao, tipoRelatorio, this);
 
     }
+    public Relatorio emitirRelatorio(){
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Insira o titulo:");
+        String titulo = scanner.nextLine();
+
+        System.out.println("Insira a descrição:");
+        String descricao = scanner.nextLine();
+
+        System.out.println("Insira o tipo de relatório:");
+        TipoRelatorio tipoRelatorio = null;
+        do {
+            for (TipoRelatorio t : TipoRelatorio.values()){
+                System.out.println("\t" + t.toString().toLowerCase().replace('_', ' '));
+            }
+            String input = scanner.nextLine();
+            for (TipoRelatorio t : TipoRelatorio.values()){
+                if (input.equalsIgnoreCase(t.toString().toLowerCase().replace('_', ' '))){
+                    tipoRelatorio = t;
+                }
+            }
+        } while (tipoRelatorio == null);
+        return emitirRelatorio(titulo, descricao, LocalDateTime.now(), tipoRelatorio);
+    }
     public boolean penalizarEmpresa(Empresa empresa, Penalidade penalidade){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("insira sua senha");
+        System.out.println("Penalizando "+ empresa.getNome() +". Insira sua senha");
         String pass = scanner.nextLine();
         if (!pass.equals(this.senha)){
-            System.out.println("Senha Inválida");
+            System.out.println("Senha Inválida. Gostaria de tentar novamente? (s/n)");
+            if(scanner.nextLine().equalsIgnoreCase("s"))
+                return penalizarEmpresa(empresa, penalidade);
             return false;
         }
 
@@ -45,10 +72,12 @@ public class Administrador extends Usuario{
 
     public boolean bonificarEmpresa(Empresa empresa, Bonificacao bonificacao){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("insira sua senha");
+        System.out.println("Bonificando "+ empresa.getNome() +". Insira sua senha:");
         String pass = scanner.nextLine();
         if (!pass.equals(this.senha)){
-            System.out.println("Senha Inválida");
+            System.out.println("Senha Inválida. Gostaria de tentar novamente? (s/n)");
+            if(scanner.nextLine().equalsIgnoreCase("s"))
+                return bonificarEmpresa(empresa, bonificacao);
             return false;
         }
 

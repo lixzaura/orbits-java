@@ -128,17 +128,32 @@ public class Empresa {
 
     @Override
     public String toString() {
-        String string = this.nome + " - " + this.score + " pontos";
-        return string;
+        StringBuilder st = new StringBuilder();
+        st.append("Nome: ").append(this.nome).append("\n");
+        st.append("Pontos: ").append(this.score).append("\n");
+        st.append("Email: ").append(this.email).append("\n");
+        st.append("Telefone: ").append(this.telefone).append("\n");
+        st.append("Status: ").append(this.status).append("\n");
+
+        return st.toString();
     }
 
     public void aumentarScore(int pontos){
-            this.score += pontos;
-        }
-        public void reduzirScore(int pontos){
+        this.score += pontos;
+        alterarStatus();
+    }
+    public void reduzirScore(int pontos){
         this.score -= pontos;
-        }
-        // public void alterarStatus(String status)
+        alterarStatus();
+    }
+    public void alterarStatus(){
+        if (score < 30){
+            status = StatusEmpresa.NAO_CONFIAVEL;
+        } else if (score < 45) {
+            status = StatusEmpresa.SUSPEITA;
+        } else
+            status = StatusEmpresa.CONFIAVEL;
+    }
 }
 
 
