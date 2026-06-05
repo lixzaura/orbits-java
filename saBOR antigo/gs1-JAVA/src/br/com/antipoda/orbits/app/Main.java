@@ -27,28 +27,8 @@ public class Main {
     public static void main(String[] args) {
         List<Relatorio> relatorios = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
-        Empresa spacex = new Empresa(
-                "Spacex",
-                "Estados Unidos",
-                "info@spacex.com",
-                "+1 (310) 363-6000",
-                "Privada",
-                LocalDate.now(),
-                "Empresa aeroespacial especializada em foguetes reutilizáveis, satélites e missões espaciais, com foco em tornar o acesso ao espaço mais acessível e sustentável.",
-                "https://www.spacex.com",
-                "40.154.884/0001-53",
-                50);
-
-        Empresa astroscale = new Empresa(
-                "Astroscale",
-                "Japão",
-                "info@astroscale.com",
-                "+11 (55) 2341-12345", // FICTICIO
-                "Pública", LocalDate.now(),
-                "Empresa especializada em sustentabilidade espacial, desenvolvendo tecnologias para remoção de lixo espacial, manutenção de satélites e operações seguras em órbita.",
-                "https://www.astroscale.com/en",
-                "12.340.001/6967-03", //FICTICIO
-                50);
+        Empresa spacex = new Empresa("Spacex", "USA", "Email@Spacex.com", "1234-5678", "MEI", LocalDate.now(), "", "", "1234-0001/6967", 50);
+        Empresa newSpace = new Empresa("NewSpace", "BR", "Email@new.space", "6769-4209", "MEI", LocalDate.now(), "", "", "1234-0001/6967", 50);
 
         ObjetoEspacial apophis = new ObjetoEspacial("Apophis", CategoriaObjeto.METEORO, ObjetoStatus.RASTREADO, 13 , 340, 67.69, RiscoColisao.ALTA,LocalDate.of(2004, 1, 1));
 
@@ -67,12 +47,12 @@ public class Main {
         Administrador adm = new Administrador(nomeUsuario, email, telefone, senhaUsuario, LocalDate.now());
         senhaUsuario = null;
 
-        System.out.println("Objeto: " + apophis.getNome() + " tem alto risco de colisão. Gostaria de emitir um relatório sobre? (s/n)");
+        System.out.println("Astro " + apophis.getNome() + " tem alto risco de colisão. Gostaria de emitir um relatório sobre? (s/n)");
         String resp = scanner.nextLine();
         if (resp.equalsIgnoreCase("s")) {
 
             String titulo = "Risco alto de colisao";
-            String descricao = "Satélite da Spacex tem alto risco de se colidir com " + apophis.getNome() + ", devido a falta de planejamento orbital.";
+            String descricao = "Satélite da Spacex tem alto risco de se colidir com Apophis, devido a falta de planejamento";
             TipoRelatorio tipo = TipoRelatorio.RISCO_COLISAO;
             System.out.println(Relatorio.toString(titulo, descricao, tipo));
             System.out.println("Gostaria de substituir essas informações? (s/n)");
@@ -85,30 +65,30 @@ public class Main {
             relatorios.add(relatorio1);
         }
 
-        Satelite satelite = new Satelite("ORBITS-12673", "Monitoramento de rotas", spacex, "95 minutos", 550, 27600, LocalDate.now(), LocalDate.EPOCH, Orbita.BAIXA, ObjetoStatus.Inativo);
+        Satelite zeni = new Satelite("zeni-télite", "voar", spacex, "por ali", 67, 69, LocalDate.now(), LocalDate.EPOCH, Orbita.BAIXA, ObjetoStatus.Inativo);
         List<Empresa> empresasIniciativa = new ArrayList<>();
 
 
         empresasIniciativa.add(spacex);
-        empresasIniciativa.add(astroscale);
+        empresasIniciativa.add(newSpace);
 
 
 
 
 
-        IniciativaEspacial iniciativa = new IniciativaEspacial(empresasIniciativa, "Orbital Clean Future", "Construindo um futuro onde o lixo espacial não é mais um problema.", "Rússia", LocalDate.of(2011, 6, 7), StatusIniciativa.ATIVA);
-        System.out.println(spacex.getNome() + " E " + astroscale.getNome() + " acabaram de entrar para a iniciativa " + iniciativa.getNome() + ". Gostaria de bonificá-las? (s/n)");
+        IniciativaEspacial iniciativa = new IniciativaEspacial(empresasIniciativa, "Iniciativa Legal", "", "Ali", LocalDate.of(2011, 6, 7), StatusIniciativa.ATIVA);
+        System.out.println(spacex.getNome() + " E " + newSpace.getNome() + " acabaram de entrar para a iniciativa" + iniciativa.getNome() + ". Gostaria de bonificá-las? (s/n)");
         resp = scanner.nextLine();
         if (resp.equalsIgnoreCase("s")){
             adm.bonificarEmpresa(spacex, Bonificacao.PARTICIPACAO_EM_INICIATIVA_SUSTENTAVEL);
-            adm.bonificarEmpresa(astroscale, Bonificacao.PARTICIPACAO_EM_INICIATIVA_SUSTENTAVEL);
+            adm.bonificarEmpresa(newSpace, Bonificacao.PARTICIPACAO_EM_INICIATIVA_SUSTENTAVEL);
         }
 
         System.out.println("Colisão detectada, gostaria de relatar? (s/n)");
         resp = scanner.nextLine();
         if (resp.equalsIgnoreCase("s")){
             String titulo = "Colisao Satelite SpaceX";
-            String descricao = "Satelite " + satelite.getNome() +  " colidiu com o astro Apophis";
+            String descricao = "Satelite XXXXXXXX colidiu com o astro Apophis";
             TipoRelatorio tipo = TipoRelatorio.INCIDENTE;
 
             System.out.println(Relatorio.toString(titulo, descricao, tipo));
@@ -128,11 +108,11 @@ public class Main {
             }
         }
 
-        System.out.println("Gostaria de consultar as informações das empresas " + spacex.getNome() + " e " + astroscale.getNome() + "(s/n)");
+        System.out.println("Gostaria de consultar as informações das empresas " + spacex.getNome() + " e " + newSpace.getNome() + "(s/n)");
         resp = scanner.nextLine();
         if (resp.equalsIgnoreCase("s")){
             System.out.println(spacex);
-            System.out.println("\n\n" + astroscale);
+            System.out.println("\n\n" + newSpace);
         }
         System.out.println("Gostaria de consultar os relatórios emitidos? (s/n)");
         resp = scanner.nextLine();

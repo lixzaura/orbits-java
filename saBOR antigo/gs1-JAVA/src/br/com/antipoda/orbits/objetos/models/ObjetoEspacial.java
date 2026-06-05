@@ -101,4 +101,8 @@ public class ObjetoEspacial {
         this.dataRegistro = dataRegistro;
     }
 
+    //OUTROS
+
+        // public void atualizarRisco(String risco)
+        // public void rastrearObjeto()
 }

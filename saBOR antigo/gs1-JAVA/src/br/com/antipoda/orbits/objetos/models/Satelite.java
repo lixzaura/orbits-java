@@ -68,5 +68,11 @@ public class Satelite extends ObjetoEspacial{
     public void setTipoOrbita(Orbita tipoOrbita) {
         this.tipoOrbita = tipoOrbita;
     }
+    
 
+    // OUTROS MÉTODOSA
+
+        // public void ativar()
+        // public void desativar()
+        // public void alterarOrbita(String novaOrbita)
 }
