@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gs1-JAVA/gs1-JAVA.iml" filepath="$PROJECT_DIR$/gs1-JAVA/gs1-JAVA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/orbits-java.iml" filepath="$PROJECT_DIR$/.idea/orbits-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/saBOR antigo/saBOR antigo.iml" filepath="$PROJECT_DIR$/saBOR antigo/saBOR antigo.iml" />
+    </modules>
+  </component>
+</project>
